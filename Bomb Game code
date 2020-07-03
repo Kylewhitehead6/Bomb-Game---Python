@@ -1,0 +1,13 @@
+def game(r,c): 
+    import random
+    bomb = (random.randrange(1, r+1), random.randrange(1,c+1))
+    x = int(input('enter row position'))
+    y = int(input('enter column position'))
+    while x != bomb[0] or y != bomb[1]: 
+        print("no bomb at this position")
+        x = int(input('enter row position'))
+        y = int(input('enter column position'))
+    print('you found the bomb')
+    print('goodbye')
+
+game(3,3)
